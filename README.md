@@ -1,10 +1,17 @@
-# Onion_search
-Python script for searching multiple onion sites and removing ad links
+This is a Python script that allows you to search for a specific text string on different onion search engines and save the results to a CSV file. The script uses the argparse module to parse command-line arguments.
 
-This Python script uses the requests library to send HTTP requests and the BeautifulSoup and re libraries for parsing and filtering website content. The script is designed to search multiple onion sites and remove ad links from the search results.
+To use the script, you need to run it from the command line and provide the following arguments:
 
-To use the script, simply enter the search term and the onion sites to search in the designated variables in the code. The script will then send requests to the onion sites, parse the HTML content, and remove any links that match the specified ad patterns. The cleaned search results are then displayed in the console.
+--search or -s: The text you want to search for. This is a required argument.
 
-The script is written in Python, making it platform-independent and easy to run on any system with Python installed. It is lightweight, fast, and efficient, making it suitable for searching large amounts of onion sites quickly.
+--engine or -e: The search engines you want to use, separated by comma. If not specified, the script will use all available engines.
 
-Overall, this script is a handy tool for anyone who needs to search multiple onion sites quickly and efficiently while avoiding ad links cluttering the search results.
+--output or -o: The name of the output file. If not specified, the script will use "search_onion.csv" as the default name.
+
+Here is an example of how to run the script:
+
+python onion_search.py --search "example search" --engine "haystak,grams,kraken" --output "my_search.csv"
+
+The script will search for "example search" on the haystak, grams, and kraken search engines and save the results to a file called "my_search.csv".
+
+Note that the script requires a running Tor service on your machine, listening on port 9050. If you don't have Tor installed, you can download it from the Tor Project website.
